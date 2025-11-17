@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Next.js + Zustand + React Query",
-  description: "Learn modern state management in Next.js: combining React Query for server state and Zustand for client state with clean, scalable patterns.",
+  description: "Learning React Query & Zustand the right way with some clean code magic.",
 };
 
 export default function RootLayout({
