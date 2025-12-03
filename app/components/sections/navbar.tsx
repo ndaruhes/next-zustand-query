@@ -69,8 +69,8 @@ export function Navbar() {
     ]
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-            <div className="container flex h-14 items-center">
+        <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 py-3">
+            <div className="container flex h-14 items-center justify-between">
 
                 <Link href="/" className="flex items-center space-x-2 mr-6">
                     <Image
@@ -83,11 +83,11 @@ export function Navbar() {
                     <span className="font-bold text-xl">NextZR</span>
                 </Link>
 
-                <nav className="hidden md:flex flex-1">
+                <nav className="hidden md:flex">
                     <NavigationMenu viewport={isMobile}>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-base">Home</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                         <li className="row-span-3">
@@ -118,7 +118,7 @@ export function Navbar() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-base">Components</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                         {components.map((component) => (
@@ -134,15 +134,14 @@ export function Navbar() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <a href="/docs">Docs</a>
+                                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} text-base`}>
+                                    <Link href="/auth/login">Login</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                            {/* <NavigationMenuItem>
+                                <NavigationMenuTrigger className="text-base">List</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[300px] gap-4 p-4">
-                                        {/* Saya modifikasi sedikit agar lebih rapi */}
                                         <ListItem href="#" title="Components">
                                             Browse all components in the library.
                                         </ListItem>
@@ -156,7 +155,7 @@ export function Navbar() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-base">Simple</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[200px] gap-4 p-4">
                                         <ListItem href="#" title="Components" />
@@ -166,7 +165,7 @@ export function Navbar() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-base">With Icon</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[200px] gap-4 p-4">
                                         <ListItem href="#" title="Backlog">
@@ -183,7 +182,7 @@ export function Navbar() {
                                         </ListItem>
                                     </ul>
                                 </NavigationMenuContent>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </nav>

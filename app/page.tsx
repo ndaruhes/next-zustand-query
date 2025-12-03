@@ -1,6 +1,6 @@
 import React from 'react'
-import MainLayout from './layouts/main-layout'
-import DashboardLayout from './layouts/dashboard-layout'
+import MainLayout from './components/layouts/main-layout'
+// import DashboardLayout from './layouts/dashboard-layout'
 
 export default function page() {
     return (
